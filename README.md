@@ -1,28 +1,17 @@
-# pkg-name
+# eslint-detect-maintainer
 
-> description:
+> detect eslint problem with category by user
 
 ## Features
 
-- tsup The simplest and fastest way to bundle your TypeScript libraries.
-- pnpm awesome package manager
-- Eslint + Prettier good format and format checker
-- TypeScript, of course!!
+- detect project eslint problem
+- problem category to user
 
 ## Try it now
 
-## copy usage remove this please !!
-
-a simple description
-
-Inspired by
-
-- [antfu/starter-ts](https://github.com/antfu/starter-ts)
-- [egoist/ts-lib-starter](https://github.com/egoist/ts-lib-starter)
-
-setup a default template to build your own tool, awesome !!
-
-find all pkg-name and replace them all!!
+```bash
+npx eslint-detect detect
+```
 
 ## LICENSE
 
