@@ -1,5 +1,5 @@
 {
-  "name": "pkg-name",
+  "name": "eslint-detect-maintainer",
   "version": "0.0.0",
   "packageManager": "pnpm@7.9.0",
   "description": "> description:",
@@ -9,6 +9,10 @@
   "author": {
     "name": "zwkang",
     "email": "kang95630@gmail.com"
+  },
+  "bin": {
+    "eslint-detect-maintainer": "./bin/index.mjs",
+    "eslint-detect": "./bin/index.mjs"
   },
   "repository": {
     "type": "git",
@@ -52,14 +56,24 @@
     "@typescript-eslint/eslint-plugin": "^5.33.1",
     "@typescript-eslint/parser": "^5.33.1",
     "bumpp": "^8.2.1",
-    "eslint": "^8.22.0",
     "eslint-config-alloy": "^4.6.2",
     "prettier": "^2.7.1",
     "tsup": "^6.2.2",
     "tsx": "^3.8.2",
     "typescript": "^4.7.4",
     "vitest": "^0.22.1",
-    "zwkang-prettier-config": "^0.0.3"
+    "zwkang-prettier-config": "^0.0.3",
+    "@types/eslint": "^8.44.0",
+    "@types/node": "^20.4.1",
+    "@types/update-notifier": "^6.0.4"
   },
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "cac": "^6.7.14",
+    "colorette": "^2.0.20",
+    "cosmiconfig": "^8.2.0",
+    "execa": "^7.1.1",
+    "update-notifier": "^6.0.2",
+    "eslint": "^8.4.1"
+  }
 }
