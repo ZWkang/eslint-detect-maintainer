@@ -16,7 +16,7 @@ process.on('uncaughtException', onErrorLogger);
 process.on('unhandledRejection', onErrorLogger);
 
 cli
-  .command('detect [text]', 'just detect git blame with eslint, category by user')
+  .command('detect', 'just detect git blame with eslint, category by user')
   .alias('d')
   .option('--include', 'include lint files path')
   .action((args, config) => {

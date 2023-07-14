@@ -12,14 +12,15 @@ export type eslintReportConfig = ESLint.Options & {
 };
 
 export async function getEslintReport(props: eslintReportConfig = {}) {
+  const { include, ...reset } = props;
   const val = new ESLint({
     useEslintrc: true,
     fix: false,
     cwd: process.cwd(),
     ignore: true,
-    ...props,
+    ...reset,
   });
-  const lintFiles = await val.lintFiles(props.include || ['**/*']);
+  const lintFiles = await val.lintFiles(include || ['**/*']);
 
   for (const eslintItem of lintFiles) {
     if (eslintItem.messages.length > 0) {
@@ -99,7 +100,7 @@ export async function getEslintReportPrint(props: eslintReportConfig = {}) {
   Object.keys(result).forEach((key) => {
     logger.success(`User: ${key}, Total unresolved eslint problem: ${result[key].length}`);
     result[key].forEach((item) => {
-      printIndentText(`CommitId: ${item.commitId}, FilePath: ${item.filePath}:${item.line}:${item.col}}`);
+      printIndentText(`CommitId: ${item.commitId}, FilePath: ${item.filePath}:${item.line}:${item.col}`);
     });
   });
 }
